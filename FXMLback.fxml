@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="550.0" prefWidth="1227.0" stylesheets="@css/Stylesheets.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.FXMLbackController">
+   <children>
+      <AnchorPane layoutY="93.0" prefHeight="457.0" prefWidth="200.0" styleClass="sidebar">
+         <children>
+            <Pane layoutX="35.0" layoutY="37.0" prefHeight="30.0" prefWidth="150.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="21.0" prefWidth="113.0" styleClass="labbtn" text="Dashboard" textFill="#2262c6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="66.0" layoutY="97.0" minHeight="30.0">
+               <children>
+                  <Label layoutX="-9.0" layoutY="6.0" prefWidth="113.0" text="Gestion Produits" textFill="#3c3a3a" />
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="41.0" layoutY="97.0" />
+            <Label layoutX="54.0" layoutY="127.0" prefWidth="113.0" text="Gestion evenements" textFill="WHITE" />
+            <Label layoutX="54.0" layoutY="160.0" prefWidth="113.0" text="Gestion fornisseurs" textFill="WHITE" />
+            <Label layoutX="54.0" layoutY="192.0" prefWidth="113.0" text="Gestion location" textFill="WHITE" />
+            <Label layoutX="54.0" layoutY="229.0" prefWidth="113.0" text="Gestion livreures" textFill="WHITE" />
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="35.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_widescreen_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="35.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_sync_settings_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="34.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_widescreen_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="34.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_sync_settings_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="34.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_widescreen_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="53.0" fitWidth="70.0" layoutX="47.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="112.0" layoutY="39.0" prefHeight="22.0" prefWidth="118.0" text="Welcome Admin" textFill="#2262c6">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_search" layoutX="400.0" layoutY="38.0" opacity="0.46" promptText="Search Product" style="-fx-background-color: transparent; -fx-border-radius: 50px; -fx-border-color: #AEB2C3;" text="Search Product">
+         <effect>
+            <DropShadow color="#b2a2a2" />
+         </effect>
+      </TextField>
+      <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="671.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8_bell_24px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="693.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8_help_32px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="715.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons8_settings_26px.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableproduct" layoutX="376.0" layoutY="158.0" prefHeight="200.0" prefWidth="688.0">
+        <columns>
+          <TableColumn fx:id="columnID" prefWidth="58.0" text="id" />
+          <TableColumn fx:id="columnNAME" prefWidth="77.0" text="nom" />
+            <TableColumn fx:id="columnDESC" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="columnPRICE" prefWidth="39.0" text="prix" />
+            <TableColumn fx:id="columnQuantite" minWidth="0.0" prefWidth="88.0" text="quantite" />
+            <TableColumn fx:id="columnTYPE" prefWidth="51.0" text="type" />
+            <TableColumn fx:id="columnTaille" prefWidth="75.0" text="taille" />
+            <TableColumn fx:id="columnVIEWS" prefWidth="75.0" text="views" />
+            <TableColumn fx:id="columnACHAT" prefWidth="75.0" text="nb achats" />
+            <TableColumn fx:id="columnMARQUE" prefWidth="75.0" text="marque" />
+        </columns>
+      </TableView>
+      <Pane layoutX="200.0" layoutY="100.0" prefHeight="167.0" prefWidth="180.0">
+         <children>
+            <TextField fx:id="txt_id" layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir l'ID" style="-fx-background-radius: 50px;" />
+            <TextField fx:id="txt_nom" layoutY="36.0" prefHeight="25.0" prefWidth="155.0" promptText=" veuiller saisir le NOM" style="-fx-background-radius: 50px;" />
+            <TextField fx:id="txt_prix" layoutX="2.0" layoutY="107.0" prefHeight="25.0" prefWidth="151.0" promptText=" veuiller saisir le PRIX" style="-fx-background-radius: 50px;" />
+            <TextField fx:id="txt_desc" layoutX="-1.0" layoutY="71.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir la description" style="-fx-background-radius: 50px;" />
+            <TextField fx:id="txt_quantite" layoutY="140.0" prefHeight="27.0" prefWidth="155.0" promptText=" veuiller saisir la QUANTITE" style="-fx-background-radius: 50px;" />
+         </children>
+      </Pane>
+      <Button fx:id="btn_insert" layoutX="482.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnInsert" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="Insert" />
+      <Button fx:id="btn_browser" layoutX="279.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleBrowser" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="choose File" />
+      <ImageView fx:id="imageView" fitHeight="53.0" fitWidth="69.0" layoutX="200.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btn_update" layoutX="578.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnupdate" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="Update" />
+      <Button fx:id="btn_delete" layoutX="672.0" layoutY="395.0" mnemonicParsing="false" onAction="#btndelete" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="Delete" />
+      <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="544.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/plus%20(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="644.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/compass.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="737.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/trash.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="526.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/search.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="34.0" layoutX="656.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/facebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="690.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/instagram.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="719.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/youtube.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_type" layoutX="200.0" layoutY="346.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir le type" style="-fx-background-radius: 50px;" />
+      <TextField fx:id="txt_taille" layoutX="200.0" layoutY="383.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir l a taille" style="-fx-background-radius: 50px;" />
+      <TextField fx:id="txt_views" layoutX="201.0" layoutY="428.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir views" style="-fx-background-radius: 50px;" />
+      <TextField fx:id="txt_achats" layoutX="200.0" layoutY="453.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir le nb d'achats" style="-fx-background-radius: 50px;" />
+      <Button fx:id="btn_stat" layoutX="578.0" layoutY="428.0" mnemonicParsing="false" onAction="#btnstat" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="statistique" />
+      <TextField fx:id="txt_marque" layoutX="200.0" layoutY="485.0" prefHeight="25.0" prefWidth="157.0" promptText=" veuiller saisir la marque du produit" style="-fx-background-radius: 50px;" />
+      <Button fx:id="btn_loguot" layoutX="112.0" layoutY="62.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: transparent; -fx-background-radius: 50px; -fx-border-radius: #AEB2C3;" text="logout" textFill="#2262c6" />
+      <Button fx:id="btn_pdf" layoutX="776.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnpdf" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #FFCD07; -fx-background-radius: 50px;" text="pdf" />
+   </children>
+   <styleClass>
+      <String fx:value="column-header" />
+      <String fx:value="column-header-background" />
+   </styleClass>
+</AnchorPane>
